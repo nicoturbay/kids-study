@@ -1,0 +1,342 @@
+// Study content from the Unit 4–7 U.S. History study guide.
+// Each question has: q (question), a (full answer for flashcards),
+// correct (short correct choice), wrong (3 distractor choices).
+
+const UNITS = [
+  {
+    id: "unit4",
+    title: "Forming a New Nation",
+    subtitle: "Unit 4",
+    emoji: "🦅", // eagle
+    color: "#5b8def",
+    questions: [
+      {
+        q: "After the American Revolution, what did many leaders worry a powerful national government might do?",
+        a: "Many leaders worried that a powerful national government might take away the rights people fought for during the Revolution.",
+        correct: "Take away people's rights",
+        wrong: ["Make trade with Britain easier", "Build too many schools", "Lower taxes for everyone"],
+      },
+      {
+        q: "Why was James Madison important during the Constitutional Convention?",
+        a: "James Madison helped guide discussions and came prepared with ideas about government.",
+        correct: "He guided discussions with ideas about government",
+        wrong: ["He led the army", "He was the first president", "He designed the flag"],
+      },
+      {
+        q: "In a republic, what do citizens do?",
+        a: "In a republic, citizens elect representatives to make decisions for them in government.",
+        correct: "Elect representatives to make decisions",
+        wrong: ["Make every law themselves", "Are ruled by a king", "Cannot vote at all"],
+      },
+      {
+        q: "What disagreement did the Great Compromise solve?",
+        a: "The Great Compromise solved disagreements about how states would be represented in Congress.",
+        correct: "How states would be represented in Congress",
+        wrong: ["Whether to fight Britain", "Where to build the capital", "How much to tax tea"],
+      },
+      {
+        q: "Why did some people oppose the Constitution?",
+        a: "Some people feared the national government would become too powerful.",
+        correct: "They feared the government would be too powerful",
+        wrong: ["They wanted a king instead", "They liked British rule", "They thought it was too short"],
+      },
+      {
+        q: "Before an amendment becomes part of the Constitution, who must approve it?",
+        a: "Before an amendment becomes part of the Constitution, it must be approved by most state legislatures.",
+        correct: "Most state legislatures",
+        wrong: ["The king of England", "Only the president", "The Supreme Court alone"],
+      },
+      {
+        q: "Which branch creates laws?",
+        a: "The Legislative Branch is responsible for creating laws.",
+        correct: "The Legislative Branch",
+        wrong: ["The Executive Branch", "The Judicial Branch", "The Military"],
+      },
+      {
+        q: "What is one job of the president and executive branch?",
+        a: "One job of the executive branch is carrying out laws passed by Congress.",
+        correct: "Carrying out laws passed by Congress",
+        wrong: ["Writing all the laws", "Deciding court cases", "Choosing state governors"],
+      },
+      {
+        q: "What is judicial review?",
+        a: "Judicial review is the power of the Supreme Court to decide whether laws follow the Constitution.",
+        correct: "The Supreme Court checks if laws follow the Constitution",
+        wrong: ["The president vetoing a law", "Congress electing judges", "States making their own courts"],
+      },
+      {
+        q: "Why was the Bill of Rights added?",
+        a: "The Bill of Rights was added to protect individual freedoms and rights.",
+        correct: "To protect people's freedoms and rights",
+        wrong: ["To raise taxes", "To create an army", "To pick a national bird"],
+      },
+      {
+        q: "Why did the Articles of Confederation create a weak government?",
+        a: "The national government could not collect taxes or enforce laws.",
+        correct: "It couldn't collect taxes or enforce laws",
+        wrong: ["It had too many presidents", "It banned all trade", "It gave states no power"],
+      },
+      {
+        q: "How do checks and balances work?",
+        a: "Checks and balances allow each branch of government to limit the power of the other branches.",
+        correct: "Each branch can limit the others' power",
+        wrong: ["One branch controls everything", "States ignore the government", "The president makes all choices"],
+      },
+      {
+        q: "Why did smaller states support the Great Compromise?",
+        a: "It gave each state equal representation in the Senate.",
+        correct: "It gave each state equal seats in the Senate",
+        wrong: ["It let them pay less tax", "It gave them more land", "It made them independent"],
+      },
+      {
+        q: "How does the Bill of Rights protect citizens today?",
+        a: "It guarantees freedoms such as freedom of speech and freedom of religion.",
+        correct: "It guarantees freedoms like speech and religion",
+        wrong: ["It sets the price of food", "It builds all the roads", "It picks the president"],
+      },
+    ],
+  },
+  {
+    id: "unit5",
+    title: "Launching the New Republic",
+    subtitle: "Unit 5",
+    emoji: "🎩", // top hat
+    color: "#9b59e0",
+    questions: [
+      {
+        q: "Which department was part of Washington's cabinet?",
+        a: "The Department of the Treasury was part of George Washington's cabinet.",
+        correct: "The Department of the Treasury",
+        wrong: ["The Department of Space", "The Department of Sports", "The Department of Schools"],
+      },
+      {
+        q: "What did Washington warn Americans about?",
+        a: "George Washington warned Americans about political parties causing division in the country.",
+        correct: "Political parties causing division",
+        wrong: ["Eating too much sugar", "Traveling west", "Building railroads"],
+      },
+      {
+        q: "What is isolationism?",
+        a: "Isolationism is the policy of avoiding involvement in conflicts with other countries.",
+        correct: "Avoiding involvement in other countries' conflicts",
+        wrong: ["Trading with everyone", "Starting many wars", "Building a big navy"],
+      },
+      {
+        q: "Which country greatly influenced U.S. foreign policy in the late 1700s and early 1800s?",
+        a: "Great Britain greatly influenced U.S. foreign policy during the late 1700s and early 1800s.",
+        correct: "Great Britain",
+        wrong: ["Japan", "Brazil", "Egypt"],
+      },
+      {
+        q: "What was one goal of the Monroe Doctrine?",
+        a: "One goal of the Monroe Doctrine was preventing European countries from interfering in the Americas.",
+        correct: "Keep Europe from interfering in the Americas",
+        wrong: ["Start trade with China", "Build a canal", "Buy Alaska"],
+      },
+      {
+        q: "Where did most Americans live in the early 1800s?",
+        a: "Most Americans lived east of the Appalachian Mountains in the early 1800s.",
+        correct: "East of the Appalachian Mountains",
+        wrong: ["On the West Coast", "In Texas", "Along the Pacific Ocean"],
+      },
+      {
+        q: "What was the Era of Good Feelings?",
+        a: "The Era of Good Feelings was a period of strong national pride and unity after the War of 1812.",
+        correct: "A time of national pride after the War of 1812",
+        wrong: ["A famous battle", "A new tax law", "A type of music"],
+      },
+      {
+        q: "Who strongly supported Andrew Jackson?",
+        a: "Andrew Jackson received strong support from common citizens and frontier settlers.",
+        correct: "Common citizens and frontier settlers",
+        wrong: ["European kings", "Wealthy bankers only", "British soldiers"],
+      },
+      {
+        q: "Why did the nullification crisis happen?",
+        a: "The nullification crisis happened because Southern states opposed high tariffs.",
+        correct: "Southern states opposed high tariffs",
+        wrong: ["The North wanted a king", "States ran out of money", "People disliked the flag"],
+      },
+      {
+        q: "What Supreme Court ruling did Jackson ignore?",
+        a: "Andrew Jackson ignored a Supreme Court ruling involving Indigenous land rights.",
+        correct: "One about Indigenous land rights",
+        wrong: ["One about taxes on tea", "One about voting age", "One about building roads"],
+      },
+      {
+        q: "Why did Washington dislike political parties?",
+        a: "Washington believed political parties could divide the country and weaken national unity.",
+        correct: "They could divide the country",
+        wrong: ["They cost too much money", "They were illegal", "They were too small"],
+      },
+      {
+        q: "How did the Monroe Doctrine change relations with Europe?",
+        a: "The Monroe Doctrine warned European countries to stay out of the Americas.",
+        correct: "It warned Europe to stay out of the Americas",
+        wrong: ["It invited Europe to rule", "It started a war", "It ended all trade"],
+      },
+      {
+        q: "Why did many Americans support Jackson in 1828?",
+        a: "Many Americans supported Andrew Jackson because he represented ordinary citizens instead of wealthy elites.",
+        correct: "He represented ordinary citizens",
+        wrong: ["He was born in Europe", "He was very rich", "He promised land to kings"],
+      },
+      {
+        q: "What was the disagreement during the nullification crisis?",
+        a: "States argued about whether they could reject federal laws they believed were unfair.",
+        correct: "Whether states could reject unfair federal laws",
+        wrong: ["Who would be president", "Where to build forts", "How to spell words"],
+      },
+    ],
+  },
+  {
+    id: "unit6",
+    title: "An Expanding Nation",
+    subtitle: "Unit 6",
+    emoji: "🐎", // horse
+    color: "#e0823c",
+    questions: [
+      {
+        q: "What was Manifest Destiny?",
+        a: "Manifest Destiny was the belief that the United States was meant to expand across North America.",
+        correct: "The belief the U.S. should expand across the continent",
+        wrong: ["A plan to leave America", "A new kind of tax", "A type of ship"],
+      },
+      {
+        q: "Why did the U.S. want Florida?",
+        a: "The United States wanted Florida in order to stop raids along the southern border.",
+        correct: "To stop raids along the southern border",
+        wrong: ["To find gold there", "To build the capital", "To grow only cotton"],
+      },
+      {
+        q: "What happened after the Treaty of Guadalupe Hidalgo?",
+        a: "After the treaty, Mexico lost a large amount of land to the United States.",
+        correct: "Mexico lost a lot of land to the U.S.",
+        wrong: ["The U.S. gave land to Mexico", "Canada joined the U.S.", "Texas became its own country"],
+      },
+      {
+        q: "What was one effect of the California Gold Rush?",
+        a: "Many people moved west hoping to find wealth.",
+        correct: "Many people moved west to find wealth",
+        wrong: ["People moved back to Europe", "Farming stopped", "The army grew smaller"],
+      },
+      {
+        q: "How did Mexicanos contribute to mining?",
+        a: "Mexicanos contributed by teaching important mining skills and techniques.",
+        correct: "They taught important mining skills",
+        wrong: ["They banned mining", "They built railroads", "They sold the gold to Europe"],
+      },
+      {
+        q: "What industry did Americans adopt from the Spanish?",
+        a: "Americans adopted sheep raising from the Spanish in the Southwest.",
+        correct: "Sheep raising",
+        wrong: ["Car building", "Coal mining", "Ship building"],
+      },
+      {
+        q: "What building material did Mexicanos use in dry southwestern climates?",
+        a: "Mexicanos used adobe to build homes in dry southwestern climates.",
+        correct: "Adobe",
+        wrong: ["Steel", "Glass", "Ice"],
+      },
+      {
+        q: "What happened before Americans settled Texas in large numbers?",
+        a: "Before Americans settled Texas in large numbers, Mexico gained independence from Spain.",
+        correct: "Mexico gained independence from Spain",
+        wrong: ["Texas joined Canada", "Gold was found in Texas", "The Civil War ended"],
+      },
+      {
+        q: "What led to the Lewis and Clark expedition?",
+        a: "The Louisiana Purchase helped lead to the Lewis and Clark expedition.",
+        correct: "The Louisiana Purchase",
+        wrong: ["The Gold Rush", "The Civil War", "The Boston Tea Party"],
+      },
+      {
+        q: "What did Lewis and Clark achieve?",
+        a: "Lewis and Clark mapped routes to the Pacific Ocean and explored new territory.",
+        correct: "They mapped routes to the Pacific Ocean",
+        wrong: ["They built the first railroad", "They wrote the Constitution", "They found gold in Florida"],
+      },
+      {
+        q: "Why did Americans support Manifest Destiny?",
+        a: "Many Americans believed expansion would bring land, opportunity, and prosperity.",
+        correct: "They believed it would bring land and opportunity",
+        wrong: ["They wanted to leave America", "They disliked farming", "They wanted fewer states"],
+      },
+      {
+        q: "Why was the Louisiana Purchase important?",
+        a: "The Louisiana Purchase doubled the size of the United States.",
+        correct: "It doubled the size of the U.S.",
+        wrong: ["It ended slavery", "It started the Gold Rush", "It created the Senate"],
+      },
+      {
+        q: "What challenges did settlers face on western trails?",
+        a: "Settlers faced challenges such as disease, bad weather, dangerous rivers, and lack of supplies.",
+        correct: "Disease, bad weather, and lack of supplies",
+        wrong: ["Too many cities", "Heavy traffic", "Boring scenery"],
+      },
+      {
+        q: "How did the Gold Rush change California?",
+        a: "The Gold Rush caused California's population to grow very quickly.",
+        correct: "Its population grew very quickly",
+        wrong: ["It became empty", "It joined Mexico", "It banned mining"],
+      },
+    ],
+  },
+  {
+    id: "unit7",
+    title: "Americans in the Mid-1800s",
+    subtitle: "Unit 7",
+    emoji: "🚂", // train
+    color: "#2bb673",
+    questions: [
+      {
+        q: "Why did Southern leaders invest in plantations?",
+        a: "Southern leaders invested in plantations because they wanted to focus on farming and enslaved labor.",
+        correct: "To focus on farming and enslaved labor",
+        wrong: ["To build factories", "To start railroads", "To open banks"],
+      },
+      {
+        q: "What geographic feature helped the South?",
+        a: "Fertile soil and long growing seasons helped the Southern economy grow.",
+        correct: "Fertile soil and long growing seasons",
+        wrong: ["Tall mountains", "Frozen lakes", "Dry deserts"],
+      },
+      {
+        q: "How did Frederick Douglass spread ideas about freedom?",
+        a: "Frederick Douglass spread ideas about freedom through speeches and newspapers.",
+        correct: "Through speeches and newspapers",
+        wrong: ["Through railroads", "Through farming", "Through paintings only"],
+      },
+      {
+        q: "What was one effect of the cotton gin?",
+        a: "One major effect of the cotton gin was that cotton production increased greatly.",
+        correct: "Cotton production increased greatly",
+        wrong: ["Cotton disappeared", "Factories closed", "Trains stopped running"],
+      },
+      {
+        q: "What would an industrialist support?",
+        a: "An industrialist would support factory production and manufacturing.",
+        correct: "Factory production and manufacturing",
+        wrong: ["Only farming", "Banning trains", "Closing factories"],
+      },
+      {
+        q: "What was the fastest way to move goods in the North by 1850?",
+        a: "By 1850, railroads were the fastest and most efficient way to move goods in the North.",
+        correct: "Railroads",
+        wrong: ["Horses", "Sailboats", "Walking"],
+      },
+      {
+        q: "How were goods often moved in the South?",
+        a: "Goods in the South were often transported using rivers.",
+        correct: "Using rivers",
+        wrong: ["Using airplanes", "Using subways", "Using highways"],
+      },
+      {
+        q: "What challenges did free African Americans face?",
+        a: "Free African Americans faced discrimination and unfair treatment in both the North and South.",
+        correct: "Discrimination in both the North and South",
+        wrong: ["No challenges at all", "Only weather problems", "Too much free land"],
+      },
+    ],
+  },
+];

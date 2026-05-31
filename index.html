@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>History Quest — U.S. History Study Game</title>
+  <meta name="description" content="A fun study game for learning U.S. History: forming a new nation, the new republic, expansion, and the mid-1800s." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦅</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <main id="app">
+    <!-- HOME SCREEN -->
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="mascot" id="mascot">🦉</div>
+        <h1>History Quest</h1>
+        <p class="tagline">Become a U.S. History Hero!</p>
+      </div>
+
+      <p class="prompt">Pick your adventure:</p>
+      <div id="unit-grid" class="unit-grid"></div>
+
+      <div class="mode-row">
+        <span class="mode-label">How do you want to learn?</span>
+        <div class="mode-toggle" role="tablist">
+          <button class="mode-btn active" data-mode="quiz" role="tab">🎮 Quiz</button>
+          <button class="mode-btn" data-mode="flash" role="tab">🃏 Flashcards</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz" class="screen">
+      <header class="game-bar">
+        <button class="icon-btn" id="quiz-home" aria-label="Back to home">⬅️</button>
+        <div class="lives" id="lives"></div>
+        <div class="streak" id="streak">🔥 0</div>
+        <div class="score-pill">⭐ <span id="score">0</span></div>
+      </header>
+
+      <div class="progress-wrap">
+        <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+        <span class="progress-text" id="progress-text">1 / 10</span>
+      </div>
+
+      <div class="card question-card">
+        <span class="unit-chip" id="quiz-unit-chip"></span>
+        <h2 id="question" class="question-text"></h2>
+      </div>
+
+      <div id="answers" class="answers"></div>
+
+      <div class="feedback" id="feedback"></div>
+      <button id="next-btn" class="next-btn hidden">Next ➡️</button>
+    </section>
+
+    <!-- FLASHCARD SCREEN -->
+    <section id="flash" class="screen">
+      <header class="game-bar">
+        <button class="icon-btn" id="flash-home" aria-label="Back to home">⬅️</button>
+        <span class="unit-chip" id="flash-unit-chip"></span>
+        <span class="progress-text" id="flash-count">1 / 10</span>
+      </header>
+
+      <div class="flashcard" id="flashcard">
+        <div class="flash-inner" id="flash-inner">
+          <div class="flash-face flash-front">
+            <span class="flash-tag">QUESTION</span>
+            <p id="flash-q"></p>
+            <span class="flash-hint">Tap to flip 🔄</span>
+          </div>
+          <div class="flash-face flash-back">
+            <span class="flash-tag">ANSWER</span>
+            <p id="flash-a"></p>
+            <span class="flash-hint">Tap to flip back 🔄</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flash-controls">
+        <button class="round-btn" id="flash-prev">⬅️</button>
+        <button class="shuffle-btn" id="flash-shuffle">🔀 Shuffle</button>
+        <button class="round-btn" id="flash-next">➡️</button>
+      </div>
+    </section>
+
+    <!-- RESULTS SCREEN -->
+    <section id="results" class="screen">
+      <div class="result-card">
+        <div class="result-emoji" id="result-emoji">🎉</div>
+        <h2 id="result-title">Great job!</h2>
+        <div class="stars" id="result-stars"></div>
+        <p class="result-score">You scored <span id="result-correct">0</span> / <span id="result-total">0</span></p>
+        <p class="result-points">⭐ <span id="result-points">0</span> points</p>
+        <p class="result-badge" id="result-badge"></p>
+        <p class="result-msg" id="result-msg"></p>
+        <div class="result-buttons">
+          <button class="big-btn" id="play-again">🔁 Play Again</button>
+          <button class="big-btn ghost" id="choose-another">🏠 Pick Another Unit</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="sound-toggle" class="sound-toggle" title="Sound on/off">🔊</div>
+
+  <script src="data.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
