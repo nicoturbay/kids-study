@@ -29,6 +29,7 @@
       <div class="mode-row">
         <span class="mode-label">How do you want to learn?</span>
         <div class="mode-toggle" role="tablist">
+          <button class="mode-btn" data-mode="feed" role="tab">📱 Feed <span class="new-tag">NEW</span></button>
           <button class="mode-btn active" data-mode="quiz" role="tab">🎮 Quiz</button>
           <button class="mode-btn" data-mode="flash" role="tab">🃏 Flashcards</button>
         </div>
@@ -88,6 +89,17 @@
         <button class="shuffle-btn" id="flash-shuffle">🔀 Shuffle</button>
         <button class="round-btn" id="flash-next">➡️</button>
       </div>
+    </section>
+
+    <!-- FEED SCREEN (TikTok-style vertical activities) -->
+    <section id="feed" class="screen">
+      <div class="feed-top">
+        <button class="icon-btn" id="feed-home" aria-label="Back to home">⬅️</button>
+        <div class="feed-progress-track"><div class="feed-progress-fill" id="feed-progress"></div></div>
+        <span class="feed-progress-text" id="feed-progress-text">0/14</span>
+      </div>
+      <div id="feed-scroll" class="feed-scroll"></div>
+      <div class="swipe-hint" id="swipe-hint">Swipe up ⬆️</div>
     </section>
 
     <!-- RESULTS SCREEN -->
